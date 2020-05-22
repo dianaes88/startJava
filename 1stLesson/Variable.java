@@ -1,5 +1,10 @@
+/*
+*program prints all primitive data types
+**/
 public class Variable{
+
   public static void main(String[] args){
+
     //primitive data types
     //integer types
     byte coreNumber = 6;

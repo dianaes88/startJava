@@ -1,6 +1,13 @@
+/*
+*program does basic arithmetic operations.
+*input data are transmitted as arguments in cmd : "3 + 5", etc.
+*for division use ':'
+*for multiplication use 'x'
+**/
 public class Calculator{
   public static void main(String[] args) {
 
+    //parse operands
     for (int i=0;i<args.length;i++){
       System.out.printf("args[%d] = %s \n", i, args[i]);
     }
@@ -10,12 +17,15 @@ public class Calculator{
       char chOperator = args[1].charAt(0);
       long result = 0L;
       boolean isSuccessful = true;
+      //plus
       if (chOperator == '+'){
         result = nFirstOperand + nSecondOperand;
       }
+      //minus
       else if(chOperator == '-'){
         result = nFirstOperand -nSecondOperand;
       }
+      //division
       else if(chOperator == ':'){
         //check if null
         if (nSecondOperand == 0){
@@ -26,9 +36,11 @@ public class Calculator{
           result = nFirstOperand/nSecondOperand;
         }
       }
+      //multiplication
       else if(chOperator == 'x'){
         result = nFirstOperand * nSecondOperand;
       }
+      //modulo
       else if(chOperator == '%'){
         //check if null
         if(nSecondOperand == 0){
@@ -39,6 +51,7 @@ public class Calculator{
           result = nFirstOperand % nSecondOperand;
         }
       }
+      //exponentiation
       else if(chOperator == '^'){
         result = nFirstOperand;
         for(int i= 1; i < nSecondOperand; i++)

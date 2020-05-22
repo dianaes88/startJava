@@ -1,9 +1,14 @@
+/*
+*program prints personality characteristics (hardcoded)
+**/
 public class ConditionalStatement{
   public static void main(String[] args) {
+
     int ageInYears = 32;
     boolean IsFemale = true;
     double heightInMeters = 1.58;
     char firstCharacterOfName = 'D';
+
     //check the age
     if (ageInYears > 20){
       System.out.println("You're over 20 years old.");

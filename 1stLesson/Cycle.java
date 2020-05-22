@@ -1,10 +1,14 @@
+
+/*
+*program prints  numbers in cycles
+**/
 public class Cycle{
   public static void main(String[] args) {
+
     //print numbers 0-20
     for (int i = 0;i <= 20;i ++){
       System.out.print(i + " ");
     }
-
     System.out.println();
 
     //print numbers -6 - 6; step=2
@@ -14,6 +18,7 @@ public class Cycle{
       num -= 2;
     }
     System.out.println();
+
     //calculate and print sum of odd numbers 10-20
     int lowerBound = 10;
     int upperBound = 20;
@@ -24,8 +29,7 @@ public class Cycle{
         sumOfoddNums += iNum;
       }
       iNum ++;
-    }
-    while (iNum <= upperBound);
+    }while (iNum <= upperBound);
     System.out.println("Sum of odd nums from 10 to 20 is " + sumOfoddNums);
   }
 }
