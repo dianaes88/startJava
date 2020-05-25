@@ -3,13 +3,13 @@
 **/
 public class ConditionalStatement {
     public static void main(String[] args) {
-        int ageInYears = 32;
+        int age = 32;
         boolean isFemale = true;
         double heightInMeters = 1.58;
-        char firstCharacterOfName = 'D';
+        char firstNameLetter = 'D';
 
         //check the age
-        if (ageInYears > 20) {
+        if (age > 20) {
             System.out.println("You're over 20 years old.");
         }
 
@@ -28,9 +28,9 @@ public class ConditionalStatement {
         }
 
         //check the first name's character
-        if (firstCharacterOfName == 'M') {
+        if (firstNameLetter == 'M') {
             System.out.println("Your name begins with 'M'.");
-        } else if (firstCharacterOfName == 'I') {
+        } else if (firstNameLetter == 'I') {
             System.out.println("Your name begins with 'I'.");
         } else {
             System.out.println("Your name starts neither 'M' nor 'I'.");

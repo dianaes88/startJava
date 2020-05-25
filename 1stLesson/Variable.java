@@ -30,6 +30,6 @@ public class Variable {
 
         //char type
         char firstCharacterOfName = 'n';
-        System.out.println("The first character of the computer name is " + Character.toString(firstCharacterOfName));
+        System.out.println("The first character of the computer name is " + firstCharacterOfName);
   }
 }

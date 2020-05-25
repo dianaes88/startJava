@@ -21,16 +21,16 @@ public class Cycle {
         System.out.println();
 
         //calculate and print sum of odd numbers 10-20
-        int lowerBound = 10;
-        int upperBound = 20;
-        int sumOfoddNums = 0;
-        int iNum = lowerBound;
+        int startRange = 10;
+        int endRange = 20;
+        int sumOdd = 0;
+        int counter = startRange;
         do {
-            if ((iNum % 2) != 0) {
-                sumOfoddNums += iNum;
+            if ((counter % 2) != 0) {
+                sumOdd += counter;
             }
-            iNum ++;
-        } while (iNum <= upperBound);
-        System.out.println("Sum of odd nums from 10 to 20 is " + sumOfoddNums);
+            counter ++;
+        } while (counter <= endRange);
+        System.out.println("Sum of odd nums from 10 to 20 is " + sumOdd);
     }
 }

@@ -3,11 +3,10 @@
 **/
 public class Unicode {
     public static void main(String[] args) {
-        char chFrom = 33;
-        char chTo = 126;
-        while (chFrom <= chTo ) {
-            System.out.printf("%s ", chFrom);
-            chFrom++;
+        char startRange = 33;
+        char endRange = 126;
+        while (startRange <= endRange ) {
+            System.out.printf("%s ", startRange++);
         }
     }
 }
