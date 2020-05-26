@@ -7,43 +7,43 @@
 public class Calculator {
     public static void main(String[] args) {
         //parse operands
-        for (int i=0;i<args.length;i++) {
+        for (int i = 0; i < args.length; i++) {
             System.out.printf("args[%d] = %s \n", i, args[i]);
         }
         if (args.length == 3) {
-            int nFirstOperand = Integer.parseInt(args[0]);
-            int nSecondOperand = Integer.parseInt(args[2]);
-            char chOperator = args[1].charAt(0);
+            int firstNum = Integer.parseInt(args[0]);
+            int secondNum = Integer.parseInt(args[2]);
+            char sign = args[1].charAt(0);
             long result = 0L;
             boolean isSuccessful = true;
 
-            if (chOperator == '+') {
-                result = nFirstOperand + nSecondOperand;
-            } else if (chOperator == '-') {
-                result = nFirstOperand -nSecondOperand;
-            } else if (chOperator == ':') {
+            if (sign == '+') {
+                result = firstNum + secondNum;
+            } else if (sign == '-') {
+                result = firstNum - secondNum;
+            } else if (sign == ':') {
                 //check if null
-                if (nSecondOperand == 0) {
+                if (secondNum == 0) {
                     System.out.println("Can't devide by zero!");
                     isSuccessful = false;
                 } else {
-                    result = nFirstOperand/nSecondOperand;
+                    result = firstNum/secondNum;
                 }
-            } else if (chOperator == 'x') {
-                result = nFirstOperand * nSecondOperand;
-            } else if (chOperator == '%') {
+            } else if (sign == 'x') {
+                result = firstNum * secondNum;
+            } else if (sign == '%') {
                 //check if null
-                if(nSecondOperand == 0) {
+                if(secondNum == 0) {
                     System.out.println("Can't devide by zero!");
                     isSuccessful = false;
                 } else {
-                    result = nFirstOperand % nSecondOperand;
+                    result = firstNum % secondNum;
                 }
-            } else if (chOperator == '^') {
-                result = nFirstOperand;
-                for (int i= 1; i < nSecondOperand; i++)
+            } else if (sign == '^') {
+                result = firstNum;
+                for (int i = 1; i < secondNum; i++)
                 {
-                    result *= nFirstOperand;
+                    result *= firstNum;
                 }
             } else {
                 System.out.println("Unknown operation");

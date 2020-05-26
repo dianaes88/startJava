@@ -10,17 +10,16 @@ public class MyFirstGame {
         System.out.println("Hi! Try to guess a number from 0 to 10.");
         do {
             System.out.printf("%d ?\n", attemptNumber);
-            if (attemptNumber == guessedNumber) {
-                System.out.printf("Yes! My number is %d. You won! Congratulations!\n", guessedNumber);
-                isGuessed = true;
-                break;
-            } else if (attemptNumber > guessedNumber) {
+            if (attemptNumber > guessedNumber) {
                 System.out.println("My number is less than your. Try again, please!");
                 attemptNumber--;
             } else {
                 System.out.println("My number is bigger than your. Try again, please!");
-                attemptNumber+=2;
+                attemptNumber++;
             }
-        } while (!isGuessed);
+        } while (attemptNumber != guessedNumber);
+
+        System.out.printf("%d ?\n", attemptNumber);
+        System.out.printf("Yes! My number is %d. You won! Congratulations!\n", guessedNumber);
     }
 }
