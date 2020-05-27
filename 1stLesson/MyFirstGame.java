@@ -6,7 +6,6 @@ public class MyFirstGame {
     public static void main(String[] args) {
         int guessedNumber = Integer.parseInt(args[0]);
         int attemptNumber = 5;
-        boolean isGuessed = false;
         System.out.println("Hi! Try to guess a number from 0 to 10.");
         do {
             System.out.printf("%d ?\n", attemptNumber);

@@ -5,7 +5,7 @@
 public class Cycle {
   public static void main(String[] args) {
         //print numbers 0-20
-        for (int i = 0;i <= 20;i ++) {
+        for (int i = 0; i <= 20; i++) {
             System.out.print(i + " ");
         }
 
@@ -29,7 +29,7 @@ public class Cycle {
             if ((counter % 2) != 0) {
                 sumOdd += counter;
             }
-            counter ++;
+            counter++;
         } while (counter <= endRange);
         System.out.println("Sum of odd nums from 10 to 20 is " + sumOdd);
     }

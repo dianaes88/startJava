@@ -27,7 +27,7 @@ public class Calculator {
                     System.out.println("Can't devide by zero!");
                     isSuccessful = false;
                 } else {
-                    result = firstNum/secondNum;
+                    result = firstNum / secondNum;
                 }
             } else if (sign == 'x') {
                 result = firstNum * secondNum;
@@ -41,8 +41,7 @@ public class Calculator {
                 }
             } else if (sign == '^') {
                 result = firstNum;
-                for (int i = 1; i < secondNum; i++)
-                {
+                for (int i = 1; i < secondNum; i++) {
                     result *= firstNum;
                 }
             } else {
