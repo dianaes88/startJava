@@ -1,10 +1,57 @@
 public class Wolf {
-    protected String male;
-    protected String name;
-    protected String color;
-    protected int age;
-    protected float weight;
+    private String male;
+    private String name;
+    private String color;
+    private int age;
+    private float weight;
 
+    //get methods
+    public String getMale() {
+        return this.male;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getColor() {
+        return this.color;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public float getWeight() {
+        return this.weight;
+    }
+
+    //set methods
+    public void setMale(String male) {
+        this.male = male;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setAge(int age) {
+        if (age > 8) {
+            System.out.println("Incorrect age!");
+        } else {
+            this.age = age;
+        }
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
+
+    //functionality
     public void walk() {
         System.out.println("Wolf can walk.");
     }
