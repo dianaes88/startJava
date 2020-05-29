@@ -4,7 +4,7 @@ public class Person {
     private String male;
     private int age;
     private float weight;
-    public float height;
+    private float height;
 
     private Person(String name, String male, int age, float weight, float height) {
         this.name = name;
