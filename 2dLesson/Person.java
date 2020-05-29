@@ -6,20 +6,20 @@ public class Person {
     private float weight;
     private float height;
 
-    private Person(String name, String male, int age, float weight, float height) {
-        this.name = name;
-        this.male = male;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
-    }
-
     public Person() {
         this.name = "Ivan";
         this.male = "man";
         this.age = 20;
         this.weight = 80.0f;
         this.height = 1.70f;
+    }
+
+    private Person(String name, String male, int age, float weight, float height) {
+        this.name = name;
+        this.male = male;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
     }
 
     public void sit() {
@@ -37,6 +37,7 @@ public class Person {
     public void talk() {
         System.out.println("I can talk.");
     }
+
     public void learnJava() {
         System.out.println("I can learn Java language.");
     }
