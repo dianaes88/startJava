@@ -18,6 +18,7 @@ public class CalculatorTest {
 
             System.out.println("Результат: " + calc.calculate());
 
+            //check if the user wants to continue calculating
             String answer = new String();
             boolean isAnswerValid = false;
             do {
