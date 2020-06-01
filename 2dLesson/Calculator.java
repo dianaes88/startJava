@@ -1,44 +1,68 @@
 public class Calculator {
-    protected int firstNumber;
-    protected int secondNumber;
-    protected long result;
+    private int firstNumber;
+    private int secondNumber;
+    private long result;
+    private char sign;
 
-    private void setNumbers(int num1, int num2) {
+    public void setFirstNumber(int num1) {
         firstNumber = num1;
+    }
+
+    public int getFirstNumber() {
+        return firstNumber;
+    }
+
+    public void setSecondNumber(int num2) {
         secondNumber = num2;
     }
-    public String calculate(int num1, int num2, char sign) {
-        this.setNumbers(num1, num2);
-        switch(sign){
+
+    public int getSecondNumber() {
+        return secondNumber;
+    }
+
+    public void setSign(char sign) {
+        this.sign = sign;
+    }
+
+    public char getSign() {
+        return sign;
+    }
+
+    public String calculate() {
+         switch(sign){
             case '+':
-                return addition();
+                return add();
             case '-':
-                return substraction();
+                return substract();
             case '*':
-                return multiplication();
+                return multiply();
             case '/':
-                return division();
+                return divide();
             case '^':
-                return exponentiation();
+                return pow();
             case '%':
-                return modularAddition();
+                return modularAdd();
             default:
                 return "Знак введен не верно!";
         }
     }
-    private String addition() {
+
+    private String add() {
         result = firstNumber + secondNumber;
         return Long.toString(result);
     }
-    private String substraction() {
+
+    private String substract() {
         result = firstNumber - secondNumber;
         return Long.toString(result);
     }
-    private String multiplication() {
+
+    private String multiply() {
         result = firstNumber * secondNumber;
         return Long.toString(result);
     }
-    private String division() {
+
+    private String divide() {
         if (secondNumber != 0) {
             result = firstNumber / secondNumber;
             return Long.toString(result);
@@ -46,7 +70,8 @@ public class Calculator {
             return "Деление на ноль невозможно!";
         }
     }
-    private String exponentiation() {
+
+    private String pow() {
         long result = firstNumber;
         for (int i = 1; i < secondNumber; i++) {
             result *= firstNumber;
@@ -54,7 +79,8 @@ public class Calculator {
         this.result = result;
         return Long.toString(this.result);
     }
-    private String modularAddition() {
+
+    private String modularAdd() {
         if (secondNumber != 0) {
             result = firstNumber % secondNumber;
             return Long.toString(result);
