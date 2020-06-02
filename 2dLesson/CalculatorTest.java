@@ -20,8 +20,10 @@ public class CalculatorTest {
             System.out.println("Результат: " + calc.calculate());
 
             //check if the user wants to continue calculating
-            System.out.print("Хотите продолжить?(да/нет) ");
-            answer = sc.next();
+            do {
+                System.out.print("Хотите продолжить?(да/нет) ");
+                answer = sc.next();
+            } while (!(answer.equals("да") || answer.equals("нет")));
         } while (answer.equals("да"));
         sc.close();
     }
