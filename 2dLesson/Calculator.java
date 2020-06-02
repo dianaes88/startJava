@@ -1,19 +1,18 @@
 public class Calculator {
     private int firstNumber;
     private int secondNumber;
-    private long result;
     private char sign;
 
-    public void setFirstNumber(int num1) {
-        firstNumber = num1;
+    public void setFirstNumber(int firstNumber) {
+        this.firstNumber = firstNumber;
     }
 
     public int getFirstNumber() {
         return firstNumber;
     }
 
-    public void setSecondNumber(int num2) {
-        secondNumber = num2;
+    public void setSecondNumber(int secondNumber) {
+        this.secondNumber = secondNumber;
     }
 
     public int getSecondNumber() {
@@ -29,7 +28,7 @@ public class Calculator {
     }
 
     public String calculate() {
-         switch(sign){
+         switch(sign) {
             case '+':
                 return add();
             case '-':
@@ -41,49 +40,43 @@ public class Calculator {
             case '^':
                 return pow();
             case '%':
-                return modularAdd();
+                return getRemainderOfDivision();
             default:
                 return "Знак введен не верно!";
         }
     }
 
     private String add() {
-        result = firstNumber + secondNumber;
-        return Long.toString(result);
+        return Long.toString(firstNumber + secondNumber);
     }
 
     private String substract() {
-        result = firstNumber - secondNumber;
-        return Long.toString(result);
+        return Long.toString(firstNumber - secondNumber);
     }
 
     private String multiply() {
-        result = firstNumber * secondNumber;
-        return Long.toString(result);
+        return Long.toString(firstNumber * secondNumber);
     }
 
     private String divide() {
         if (secondNumber != 0) {
-            result = firstNumber / secondNumber;
-            return Long.toString(result);
+            return Long.toString(firstNumber / secondNumber);
         } else {
             return "Деление на ноль невозможно!";
         }
     }
 
     private String pow() {
-        long result = firstNumber;
-        for (int i = 1; i < secondNumber; i++) {
+        long result = 1;
+        for (int i = 0; i < secondNumber; i++) {
             result *= firstNumber;
         }
-        this.result = result;
-        return Long.toString(this.result);
+        return Long.toString(result);
     }
 
-    private String modularAdd() {
+    private String getRemainderOfDivision() {
         if (secondNumber != 0) {
-            result = firstNumber % secondNumber;
-            return Long.toString(result);
+            return Long.toString(firstNumber % secondNumber);
         } else {
             return "Деление на ноль невозможно!";
         }

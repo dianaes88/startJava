@@ -5,8 +5,9 @@ public class CalculatorTest {
         Scanner sc = new Scanner(System.in);
         Calculator calc = new Calculator();
         boolean isOver = false;
+        String answer;
 
-        while (!isOver) {
+        do {
             System.out.print("Ведите первое число: ");
             calc.setFirstNumber(sc.nextInt());
 
@@ -19,21 +20,9 @@ public class CalculatorTest {
             System.out.println("Результат: " + calc.calculate());
 
             //check if the user wants to continue calculating
-            String answer = new String();
-            boolean isAnswerValid = false;
-            do {
-                System.out.print("Хотите продолжить?(да/нет) ");
-                answer = sc.next();
-                if (answer.equals("да")) {
-                    isAnswerValid = true;
-                } else if (answer.equals("нет")) {
-                    isAnswerValid = true;
-                    isOver = true;
-                } else {
-                    System.out.println("Ответ не понятен.");
-                }
-            } while (!isAnswerValid);
-        }
+            System.out.print("Хотите продолжить?(да/нет) ");
+            answer = sc.next();
+        } while (answer.equals("да"));
         sc.close();
     }
 }
