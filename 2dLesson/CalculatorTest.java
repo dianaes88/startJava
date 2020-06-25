@@ -4,7 +4,6 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Calculator calc = new Calculator();
-        boolean isOver = false;
         String answer;
 
         do {
