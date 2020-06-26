@@ -1,8 +1,8 @@
 public class Player {
     private String name;
-    private int attemptNumber;
+    private int number;
 
-    public void setName(String name) {
+    public Player(String name) {
         this.name = name;
     }
 
@@ -10,11 +10,11 @@ public class Player {
         return name;
     }
 
-    public void setAttemptNumber(int attemptNumber) {
-        this.attemptNumber = attemptNumber;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public int getAttemptNumber() {
-        return attemptNumber;
+    public int getNumber() {
+        return number;
     }
 }
