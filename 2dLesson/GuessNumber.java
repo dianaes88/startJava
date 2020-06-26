@@ -10,21 +10,25 @@ public class GuessNumber {
     public GuessNumber(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
-        guessedNumber = rand.nextInt(101);
+        guessedNumber = 0;
     }
 
     public int getGuessedNumber() {
         return guessedNumber;
     }
 
-    public void start() {
-        Scanner sc = new Scanner(System.in);
+    public void setGuessedNumber(int number) {
+        this.guessedNumber = number;
+    }
+
+    public void start(Scanner sc) {
         System.out.println("Hello, please, enter your names:");
         playerOne.setName(sc.next());
         System.out.println("Player One: " + playerOne.getName());
         playerTwo.setName(sc.next());
         System.out.println("Player Two: " + playerTwo.getName());
         System.out.printf("%s and %s, welcome to the game. Try to guess a number from 0 to 100. Lets'start!\n", playerOne.getName(), playerTwo.getName());
+        setGuessedNumber(rand.nextInt(101));
         int attemptNumber = 0;
 
         game:
